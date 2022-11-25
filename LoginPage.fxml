@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.supplychainmanagement.LoginPageController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0a0d10" height="415.0" layoutY="85.0" stroke="BLACK" strokeType="INSIDE" width="500.0" />
+      <Label layoutX="68.0" layoutY="156.0" text="LoginPage" textFill="#faf6f6">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="241.0" text="Email" textFill="#f7f4f4" />
+      <Label layoutX="74.0" layoutY="310.0" text="password" textFill="#f2eded" />
+      <TextField fx:id="email" layoutX="71.0" layoutY="267.0" promptText="abc@gmail.com" />
+      <Button layoutX="250.0" layoutY="376.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="26.0" prefWidth="63.0" text="Login" textFill="#cf0707" />
+      <PasswordField fx:id="password" layoutX="71.0" layoutY="337.0" promptText="*****" />
+      <Button layoutX="414.0" layoutY="115.0" mnemonicParsing="false" onMouseClicked="#signUp" text="Sign Up" textFill="#e80e0e" />
+      <Label layoutX="221.0" layoutY="119.0" text="New to the App? Sign Up here -&gt;" textFill="#fcfafa" />
+   </children>
+</AnchorPane>
