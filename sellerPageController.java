@@ -23,7 +23,7 @@ public class sellerPageController {
     @FXML
     public void add() throws SQLException
     {
-        ResultSet res = HelloApplication.connection.executequery("Select max(productId) from product");
+        ResultSet res = HelloApplication.connection.executequery("Select max(productId) from product");  // Query executed and stored the result in ResultSet res.
         Dialog<String> dialog = new Dialog<>();
         ButtonType type = new ButtonType("OK", ButtonBar.ButtonData.OK_DONE);
         dialog.setTitle("Add products");
@@ -32,7 +32,7 @@ public class sellerPageController {
             dialog.setContentText("please fill the details of the product before adding it.");
         }
         if(res.next()) {
-            product = res.getInt("max(productId)") + 1;
+            product = res.getInt("max(productId)") + 1;            // res.getInt("columnName") to get info from database. 
             String query = String.format("Insert into product values ('%s',%s,%s,'%s')", pName.getText(), product, price.getText(), email.getText());
             int response = HelloApplication.connection.executeupdate(query);
             if(response>0)
